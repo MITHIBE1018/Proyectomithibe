@@ -24,13 +24,12 @@
         body {
             font-family: 'Quicksand', sans-serif;
             margin: 0;
-            background: #ECF0F1;
             width:30%;
             height:30%;
             margin:0 auto;
             background-size: cover;
-            background-image: url("https://t3.ftcdn.net/jpg/03/68/70/70/240_F_368707001_Jyso8Ftg1eegaeRUDzvj5JuXVM2Bx3R6.jpg");
-            background-position: center;
+            background-image: url("./imagenes/fondoemail.jpg");
+            background-position: center; 
         }
         .login {
             width: 100%;
@@ -43,6 +42,7 @@
             grid-template-rows: auto 1fr
             auto;
             width: 300px;
+            justify-items: center;
         }
         .logo {
             height: 150px;
@@ -52,7 +52,7 @@
             display: none;
         }
         .tittle {
-            color: #ECF0F1;
+            color: navy;
           font-size: var(--lg);
           margin-bottom: 100px;
           text-align: center;
@@ -66,29 +66,23 @@
             margin-bottom: 50px;
             text-align: center;
         }
-        .form{
+        .Email-image{
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
+            background-color:rgb(108, 108, 110);
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+           
         }
-
-        .label{
-            font-size:  var(--sm);
-            font-weight: bold;
-            margin-bottom: 4px;
+        .Resend a{
+            font-size: var(--sm);
+            text-decoration: none;
         }
-
-        .input{
-            background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            height: 30px;
-            font-size: var(--md);
-            padding: 6px;
-            margin-bottom: 12px;
-        }
-        
-        .primary-button {
-            background-color: chartreuse;
+        .Primary-button {
+            background-color: rgb(177, 221, 182);
             border-radius: 8px;
             border: none;
             color: var(--black);
@@ -97,6 +91,7 @@
             font-size: var(--md);
             font-weight: bold;
             height: 50px;
+            
         }
 
         .login-button {
@@ -110,7 +105,7 @@
                 margin-top: 14px;
             }
         }
-      
+
     </style>
 </head>
 <body>
@@ -119,27 +114,18 @@
 <div class="form-container">
    <img src="./imagenes/foto.png" alt="logo" class="logo"> 
 
-  <h2 class="tittle"><p><del>Create new account</del></p></h2>
-       <p class="subtittle"><b>ENTER A NEW PASSWORD FOR YOU ACCOUNT</b></p>
-    <form action="/" class="form"> 
+  <h2 class="tittle"><p>Email has been sent!</p></h2>
+       <p class="subtittle"><b>Please check yout inbox for intructions on how to reset the password</b></p>
+    
+       <div class="Email-image">
+        <img src="./iconos/charla.png" alt="Email-image">
+       </div>
+       <button class="Primary-button login-button">Login</button>
 
-    <label for="password"
-    class="label">password</label> 
-    <input type)="password" id="password" 
-    placeholder="*************"
-    class="input input-password">
-
-       <label for="new-password"
-        class="label">password</label> 
-        <input type)="password" id="new-password" 
-        placeholder="*************"
-        class="input input-password">
-
-        <input type="submit"
-        value="confirm" class="primary-button  login-button">
-
-        
-</form>
+       <p class="Resend">
+        <span>Don't receive the email?</span>
+        <a href="/">Resend</a>
+        </p>
 </div>
     </div>
     
